@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 
 const api = "https://swapi.dev/api/";
-function MainContent() {
+
+function MainContent(props) {
   const [data, setData] = useState(null);
+  let { shipNumber } = props;
 
   useEffect(() => {
-    if (!data) {
-      fetch(`${api}starships/9/`)
-        .then((res) => res.json())
-        .then((res) => setData(res))
-        .catch((error) => console.error(error));
-    }
-  });
+    fetch(`${api}starships/${shipNumber}/`)
+      .then((res) => res.json())
+      .then((res) => setData(res))
+      .catch((error) => console.error(error));
+  }, [shipNumber]);
+
   return (
     <>
       Name: {data && data.name}
