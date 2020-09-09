@@ -15,6 +15,12 @@ function Menu() {
       >
         Persons
       </Link>
+      <Link
+        className={location.pathname === "/planets" ? "active" : ""}
+        to="/planets"
+      >
+        Planets
+      </Link>
     </div>
   );
 }

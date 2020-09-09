@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainPage from "./Pages/MainPage";
 import PersonsPage from "./Pages/PersonsPage";
+import PlanetsPage from "./Pages/PlanetsPage";
 import Menu from "./Elements/Menu";
 
 function App() {
@@ -16,6 +17,10 @@ function App() {
         <Route path="/persons">
           <Menu />
           <PersonsPage />
+        </Route>
+        <Route path="/planets">
+          <Menu />
+          <PlanetsPage />
         </Route>
         <Route path="*">
           <Menu />
