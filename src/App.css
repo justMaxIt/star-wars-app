@@ -14,7 +14,7 @@
   text-decoration: none;
   font-size: 30px;
   font-weight: 600;
-  color: blue
+  color: blue;
 }
 
 .active {
@@ -30,4 +30,20 @@
   width: calc(100vw - 160px);
   height: 50px;
   background-color: chocolate;
+}
+
+.planets-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .planets-pagination {
+  display: flex;
+  flex-direction: row;
+} */
+
+.rc-pagination {
+  /* width: 100vw;
+  height: 100px; */
+  /* background-color: rgb(207, 221, 8); */
 }
