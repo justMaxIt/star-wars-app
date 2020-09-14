@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./../App.css";
 import ReactDOM from "react-dom";
 import Pagination from "rc-pagination";
-
-// import PlanetsPage from "../Pages/PlanetsPage";
 
 const api = "https://swapi.dev/api/";
 
@@ -11,7 +10,7 @@ function PlanetsContent(props) {
   const [numberPlanetsPage, setNumberPlanetsPage] = useState("");
 
   useEffect(() => {
-    fetch(`${api}planets/${numberPlanetsPage}`)
+    fetch(`${api}planets/?page=${numberPlanetsPage}`)
       .then((res) => res.json())
       .then((res) => setData(res.results))
       .catch((error) => console.error(error));
@@ -19,30 +18,24 @@ function PlanetsContent(props) {
 
   return (
     <div className="planets-content">
-      <Pagination simple defaultCurrent={1} total={50} />
-      <button onClick={() => setNumberPlanetsPage("?page=1")}>
-        First page
-      </button>
+      <div className="pagination">
+        <Pagination
+          defaultCurrent={2}
+          total={60}
+          onChange={(page) => setNumberPlanetsPage(page)}
+        />
+      </div>
+      {/* <button onClick={() => setNumberPlanetsPage("1")}>First page</button>
       <br /> <br />
-      <button onClick={() => setNumberPlanetsPage("?page=2")}>
-        Second page
-      </button>
+      <button onClick={() => setNumberPlanetsPage("2")}>Second page</button>
       <br /> <br />
-      <button onClick={() => setNumberPlanetsPage("?page=3")}>
-        Third page
-      </button>
+      <button onClick={() => setNumberPlanetsPage("3")}>Third page</button>
       <br /> <br />
-      <button onClick={() => setNumberPlanetsPage("?page=4")}>
-        Fourth page
-      </button>
+      <button onClick={() => setNumberPlanetsPage("4")}>Fourth page</button>
       <br /> <br />
-      <button onClick={() => setNumberPlanetsPage("?page=5")}>
-        Fifth page
-      </button>
+      <button onClick={() => setNumberPlanetsPage("5")}>Fifth page</button>
       <br /> <br />
-      <button onClick={() => setNumberPlanetsPage("?page=6")}>
-        Sixth page
-      </button>
+      <button onClick={() => setNumberPlanetsPage("6")}>Sixth page</button> */}
       <ul>
         {data
           .filter((e, ind) => ind % 2 !== 1)
@@ -59,5 +52,6 @@ function PlanetsContent(props) {
     </div>
   );
 }
+
 ReactDOM.render(<Pagination />, document.getElementById("root"));
 export default PlanetsContent;
