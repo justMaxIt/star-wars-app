@@ -5,6 +5,7 @@ import MainPage from "./Pages/MainPage";
 import PersonsPage from "./Pages/PersonsPage";
 import PlanetsPage from "./Pages/PlanetsPage";
 import Menu from "./Elements/Menu";
+import PlanetsPageSearch from "./Pages/PlanetsPageSearch";
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
         <Route path="/planets">
           <Menu />
           <PlanetsPage />
+        </Route>
+        <Route path="/planetsSearch">
+          <Menu />
+          <PlanetsPageSearch />
         </Route>
         <Route path="*">
           <Menu />

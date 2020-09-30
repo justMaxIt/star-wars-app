@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import MainContent from "../Elements/MainContent";
-import MainMenu from "../Elements/MainMenu";
+import MainContent from "../Elements/Main/MainContent";
+import MainMenu from "../Elements/Main/MainMenu";
 
 function MainPage() {
   const [shipNumber, setShipNumber] = useState(null);

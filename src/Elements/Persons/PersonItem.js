@@ -1,6 +1,6 @@
 import React from "react";
-import "./../App.css";
-import MainContent from "./MainContent";
+// import "./../../App.css";
+import MainContent from "../Main/MainContent";
 
 const PersonItem = (props) => {
   let starshipElements = props.data?.starships.map((starship) => (

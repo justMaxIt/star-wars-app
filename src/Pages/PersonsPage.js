@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./../App.css";
-import PersonsMenu from "./../Elements/PersonsMenu";
-import PersonsContent from "./../Elements/PersonsContent";
+import PersonsMenu from "../Elements/Persons/PersonsMenu";
+import PersonsContent from "../Elements/Persons/PersonsContent";
 
 const PersonsPage = () => {
   const [data, setData] = useState(null);

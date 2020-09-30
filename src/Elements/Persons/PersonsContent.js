@@ -1,5 +1,5 @@
 import React from "react";
-import "./../App.css";
+// import "./../App.css";
 import PersonItem from "./PersonItem";
 
 const PersonsContent = (props) => {

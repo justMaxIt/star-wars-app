@@ -1,5 +1,5 @@
 import React from "react";
-import PlanetsContent from "../Elements/PlanetsContent";
+import PlanetsContent from "../Elements/Planets/PlanetsContent";
 import "./../App.css";
 // import ReactDOM from "react-dom";
 // import Pagination from "rc-pagination";
