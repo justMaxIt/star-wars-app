@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 // import "./../App.css";
 // import MainContent from "../Main/MainContent";
 
 const PlanetsSearchContent = (props) => {
-  return <div>data</div>;
+  let { data } = props;
+
+  if (data.name) {
+    return (
+      <div>
+        Name: {data.name}
+        <br /> <br />
+      </div>
+    );
+  } else {
+    return "dsfvswfwe";
+  }
 };
 
 //   return (

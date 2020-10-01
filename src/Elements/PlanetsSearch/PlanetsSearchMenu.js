@@ -3,7 +3,8 @@ import React, { useState } from "react";
 
 const PlanetsSearchMenu = (props) => {
   const [val, setVal] = useState(0);
-  const [personId, setPersonId] = useState(1);
+  // const [personId, setPersonId] = useState(1);
+  let { setPlanetNumber } = props;
   return (
     <div>
       <div className="main-menu">
@@ -16,7 +17,7 @@ const PlanetsSearchMenu = (props) => {
           type="submit"
           value="Find"
           onClick={() => {
-            setPersonId(val);
+            setPlanetNumber(val);
           }}
         />
         {/* <input
