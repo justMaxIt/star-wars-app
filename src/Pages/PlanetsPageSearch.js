@@ -8,6 +8,7 @@ const api = "https://swapi.dev/api/";
 
 function PlanetsPageSearch() {
   const [planetNumber, setPlanetNumber] = useState(null);
+  const [searchString, setSearchString] = useState("");
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,10 +17,14 @@ function PlanetsPageSearch() {
       .then((res) => setData(res))
       .catch((error) => console.error(error));
   }, [planetNumber]);
-
+  console.log(searchString);
   return (
     <div className="planets-page">
-      <PlanetsSearchMenu setPlanetNumber={setPlanetNumber} />
+      <PlanetsSearchMenu
+        setPlanetNumber={setPlanetNumber}
+        setSearchString={setSearchString}
+        searchString={searchString}
+      />
       <PlanetsSearchContent data={data} />
     </div>
   );

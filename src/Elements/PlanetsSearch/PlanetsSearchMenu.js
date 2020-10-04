@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const PlanetsSearchMenu = (props) => {
   const [val, setVal] = useState(0);
   // const [personId, setPersonId] = useState(1);
-  let { setPlanetNumber } = props;
+  let { setPlanetNumber, setSearchString, searchString } = props;
   return (
     <div>
       <div className="main-menu">
@@ -20,13 +20,13 @@ const PlanetsSearchMenu = (props) => {
             setPlanetNumber(val);
           }}
         />
-        {/* <input
+        <input
           className="search-textarea"
           type="text"
           placeholder="Search"
           onChange={(e) => setSearchString(e.target.value)}
           value={searchString}
-        /> */}
+        />
       </div>
     </div>
   );
