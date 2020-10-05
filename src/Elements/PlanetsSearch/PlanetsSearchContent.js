@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-// import "./../App.css";
-// import MainContent from "../Main/MainContent";
+import React from "react";
+import PlanetItem from "./PlanetItem";
 
 const PlanetsSearchContent = (props) => {
   let { data } = props;
@@ -10,51 +9,24 @@ const PlanetsSearchContent = (props) => {
       <div>
         Name: {data.name}
         <br /> <br />
+        climate: {data.climate}
+        <br /> <br />
+        population: {data.population}
+        <br /> <br />
+        diameter: {data.diameter}
+        <br /> <br />
       </div>
     );
+  }
+  if (data.results) {
+    let searchData = data.results.map((planet) => (
+      <PlanetItem planet={planet} />
+    ));
+
+    return <div>{searchData}</div>;
   } else {
-    return "dsfvswfwe";
+    return "find your planet";
   }
 };
-
-//   return (
-//     <div>
-//       <div>
-//         Name: {props.data?.name}
-//         <br />
-//         Birth date: {props.data?.birth_year}
-//         <br />
-//         Gender: {props.data?.gender}
-//         <br />
-//         Height: {props.data?.height}
-//         <br />
-//         Skin color: {props.data?.skin_color}
-//         <br />
-//       </div>
-//       <div className="personShip">{starshipElements}</div>
-//     </div>
-//   );
-// };
-// const PlanetsSearchContent = (props) => {
-//   const { searchArr, searchString, data } = props;
-
-//   if (searchString !== "") {
-//     return <div className="search-block">{searchArr}</div>;
-//   } else {
-//     if (data?.name) {
-//       return (
-//         <div>
-//           <PersonSearchItem data={data} />
-//         </div>
-//       );
-//     } else {
-//       return (
-//         <div className="noStarShip text-wrap">
-//           <div>Person not found</div>
-//         </div>
-//       );
-//     }
-//   }
-// };
 
 export default PlanetsSearchContent;

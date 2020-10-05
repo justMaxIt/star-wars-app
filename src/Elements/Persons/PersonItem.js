@@ -1,14 +1,6 @@
 import React from "react";
-// import "./../../App.css";
-import MainContent from "../Main/MainContent";
 
 const PersonItem = (props) => {
-  // console.log(props);
-  // props.data?setApi
-  // let starshipElements = props.data?.starships.map((starship) => (
-  //   <MainContent key={starship.toString()} shipApi={starship} />
-  // ));
-  // console.log(starshipElements);
   return (
     <div>
       <div>
@@ -23,7 +15,6 @@ const PersonItem = (props) => {
         Skin color: {props.data?.skin_color}
         <br />
       </div>
-      {/* <div className="personShip">{starshipElements}</div> */}
     </div>
   );
 };

@@ -12,12 +12,22 @@ function PlanetsPageSearch() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`${api}planets/${planetNumber}/`)
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((error) => console.error(error));
-  }, [planetNumber]);
-  console.log(searchString);
+    if (searchString !== "") {
+      fetch(`${api}planets/?search=${searchString}`)
+        .then((res) => res.json())
+        .then((res) => setData(res))
+        .catch((error) => console.error(error));
+    }
+
+    if (planetNumber !== null) {
+      fetch(`${api}planets/${planetNumber}/`)
+        .then((res) => res.json())
+        .then((res) => setData(res))
+        .catch((error) => console.error(error));
+    }
+  }, [planetNumber, searchString]);
+
+  console.log(searchString, data);
   return (
     <div className="planets-page">
       <PlanetsSearchMenu
