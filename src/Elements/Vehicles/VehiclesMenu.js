@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-const PlanetsSearchMenu = (props) => {
+const VehiclesMenu = (props) => {
   const [val, setVal] = useState(0);
+  // const [personId, setPersonId] = useState(1);
   let { setPlanetNumber, setSearchString, searchString } = props;
   return (
     <div>
@@ -30,4 +31,4 @@ const PlanetsSearchMenu = (props) => {
   );
 };
 
-export default PlanetsSearchMenu;
+export default VehiclesMenu;

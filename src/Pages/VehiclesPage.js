@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-
-import PlanetsSearchContent from "../Elements/PlanetsSearch/PlanetsSearchContent";
-import PlanetsSearchMenu from "../Elements/PlanetsSearch/PlanetsSearchMenu";
+import VehiclesContent from "../Elements/Vehicles/VehiclesContent";
+import VehiclesMenu from "../Elements/Vehicles/VehiclesMenu";
 import "./../App.css";
 
 const api = "https://swapi.dev/api/";
 
-function PlanetsPageSearch() {
+function VehiclesPage() {
   const [planetNumber, setPlanetNumber] = useState(null);
   const [searchString, setSearchString] = useState("");
   const [data, setData] = useState([]);
@@ -29,14 +28,14 @@ function PlanetsPageSearch() {
 
   return (
     <div className="planets-page">
-      <PlanetsSearchMenu
+      <VehiclesMenu
         setPlanetNumber={setPlanetNumber}
         setSearchString={setSearchString}
         searchString={searchString}
       />
-      <PlanetsSearchContent data={data} />
+      <VehiclesContent data={data} />
     </div>
   );
 }
 
-export default PlanetsPageSearch;
+export default VehiclesPage;

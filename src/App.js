@@ -6,6 +6,7 @@ import PersonsPage from "./Pages/PersonsPage";
 import PlanetsPage from "./Pages/PlanetsPage";
 import Menu from "./Elements/Menu";
 import PlanetsPageSearch from "./Pages/PlanetsPageSearch";
+import VehiclesPage from "./Pages/VehiclesPage";
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
         <Route path="/planetsSearch">
           <Menu />
           <PlanetsPageSearch />
+        </Route>
+        <Route path="/vehicles">
+          <Menu />
+          <VehiclesPage />
         </Route>
         <Route path="*">
           <Menu />

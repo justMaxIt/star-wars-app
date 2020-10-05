@@ -27,6 +27,12 @@ function Menu() {
       >
         Planets Search
       </Link>
+      <Link
+        className={location.pathname === "/vehicles" ? "active" : ""}
+        to="/vehicles"
+      >
+        Vehicles
+      </Link>
     </div>
   );
 }
