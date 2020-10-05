@@ -4,7 +4,12 @@ const VehicleItem = (props) => {
   return (
     <div>
       <ul>
-        <li>{props.planet.name}</li>
+        <li>
+          Name: {props.item.name}
+          <br />
+          <br />
+          Model: {props.item.model}
+        </li>
       </ul>
     </div>
   );

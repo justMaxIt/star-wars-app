@@ -6,33 +6,21 @@ import "./../App.css";
 const api = "https://swapi.dev/api/";
 
 function VehiclesPage() {
-  const [planetNumber, setPlanetNumber] = useState(null);
-  const [searchString, setSearchString] = useState("");
+  const [vehicleString, setVehicleString] = useState("");
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    if (searchString !== "") {
-      fetch(`${api}planets/?search=${searchString}`)
+    if (vehicleString !== "") {
+      fetch(`${api}vehicles/?search=${vehicleString}`)
         .then((res) => res.json())
         .then((res) => setData(res))
         .catch((error) => console.error(error));
     }
-
-    if (planetNumber !== null) {
-      fetch(`${api}planets/${planetNumber}/`)
-        .then((res) => res.json())
-        .then((res) => setData(res))
-        .catch((error) => console.error(error));
-    }
-  }, [planetNumber, searchString]);
+  }, [vehicleString]);
 
   return (
     <div className="planets-page">
-      <VehiclesMenu
-        setPlanetNumber={setPlanetNumber}
-        setSearchString={setSearchString}
-        searchString={searchString}
-      />
+      <VehiclesMenu setVehicleString={setVehicleString} />
       <VehiclesContent data={data} />
     </div>
   );
