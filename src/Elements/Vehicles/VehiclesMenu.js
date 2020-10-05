@@ -17,6 +17,7 @@ const VehiclesMenu = (props) => {
           value="Find"
           onClick={() => {
             setVehicleString(val);
+            localStorage.setItem("SWA-vehicle-search", JSON.stringify(val));
           }}
         />
       </div>

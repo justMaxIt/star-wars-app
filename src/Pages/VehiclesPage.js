@@ -10,6 +10,7 @@ function VehiclesPage() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    setVehicleString(JSON.parse(localStorage.getItem("SWA-vehicle-search")));
     if (vehicleString !== "") {
       fetch(`${api}vehicles/?search=${vehicleString}`)
         .then((res) => res.json())
