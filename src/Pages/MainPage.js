@@ -8,7 +8,9 @@ function MainPage() {
   return (
     <div className="main-page">
       <MainMenu setShipNumber={setShipNumber} />
-      <MainContent shipNumber={shipNumber} />
+      <div className="planets-page">
+        <MainContent shipNumber={shipNumber} />
+      </div>
     </div>
   );
 }

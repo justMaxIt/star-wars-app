@@ -7,7 +7,6 @@ const VehicleItem = (props) => {
         <li>
           Name: {props.item.name}
           <br />
-          <br />
           Model: {props.item.model}
         </li>
       </ul>
