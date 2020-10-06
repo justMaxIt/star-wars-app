@@ -5,7 +5,7 @@
 .menu {
   width: 220px;
   height: 100vh;
-  background-color: blanchedalmond;
+  background-color: #44473C;
   display: flex;
   flex-direction: column;
 }
@@ -14,11 +14,11 @@
   text-decoration: none;
   font-size: 30px;
   font-weight: 600;
-  color: blue;
+  color: #94B301;
 }
 
 .active {
-  background-color: rgb(223, 165, 89);
+  background-color: #281E20;
 }
 
 .main-page {
@@ -29,7 +29,7 @@
 .main-menu {
   width: calc(100vw - 220px);
   height: 50px;
-  background-color: chocolate;
+  background-color: #BD2902;
 }
 
 .planets-content {
