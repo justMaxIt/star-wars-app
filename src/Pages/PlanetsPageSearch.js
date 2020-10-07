@@ -28,13 +28,17 @@ function PlanetsPageSearch() {
   }, [planetNumber, searchString]);
 
   return (
-    <div className="planets-page">
-      <PlanetsSearchMenu
-        setPlanetNumber={setPlanetNumber}
-        setSearchString={setSearchString}
-        searchString={searchString}
-      />
-      <PlanetsSearchContent data={data} />
+    <div className="planets-search-page">
+      <div className="planets-search-menu">
+        <PlanetsSearchMenu
+          setPlanetNumber={setPlanetNumber}
+          setSearchString={setSearchString}
+          searchString={searchString}
+        />
+      </div>
+      <div className="planets-search-content">
+        <PlanetsSearchContent data={data} />
+      </div>
     </div>
   );
 }

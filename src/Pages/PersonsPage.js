@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./../App.css";
 import PersonsMenu from "../Elements/Persons/PersonsMenu";
 import PersonsContent from "../Elements/Persons/PersonsContent";
 
@@ -36,15 +35,18 @@ const PersonsPage = () => {
   }, [personId, api]);
 
   return (
-    <div className="main-page">
-      <PersonsMenu
-        setSearchList={setSearchList}
-        setSearchString={setSearchString}
-        searchString={searchString}
-        setData={setData}
-        setPersonId={setPersonId}
-      />
-      <div className="planets-page">
+    <div className="person-page">
+      <div className="person-menu">
+        <PersonsMenu
+          setSearchList={setSearchList}
+          setSearchString={setSearchString}
+          searchString={searchString}
+          setData={setData}
+          setPersonId={setPersonId}
+        />
+      </div>
+
+      <div className="person-content">
         <PersonsContent
           searchList={searchList}
           searchString={searchString}

@@ -6,7 +6,7 @@ const VehiclesMenu = (props) => {
   let { setVehicleString } = props;
   return (
     <div>
-      <div className="main-menu">
+      <div>
         <input
           type="text"
           placeholder="Search"

@@ -5,7 +5,7 @@ const PlanetsSearchMenu = (props) => {
   let { setPlanetNumber, setSearchString, searchString } = props;
   return (
     <div>
-      <div className="main-menu">
+      <div>
         <input
           type="number"
           placeholder="Enter planet id"

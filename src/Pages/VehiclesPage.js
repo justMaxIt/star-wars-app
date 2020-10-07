@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import VehiclesContent from "../Elements/Vehicles/VehiclesContent";
 import VehiclesMenu from "../Elements/Vehicles/VehiclesMenu";
-import "./../App.css";
 
 const api = "https://swapi.dev/api/";
 
@@ -20,9 +19,13 @@ function VehiclesPage() {
   }, [vehicleString]);
 
   return (
-    <div className="planets-page">
-      <VehiclesMenu setVehicleString={setVehicleString} />
-      <VehiclesContent data={data} />
+    <div className="vehicles-page">
+      <div className="vehicles-menu">
+        <VehiclesMenu setVehicleString={setVehicleString} />
+      </div>
+      <div className="vehicles-content">
+        <VehiclesContent data={data} />
+      </div>
     </div>
   );
 }

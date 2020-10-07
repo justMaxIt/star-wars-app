@@ -5,13 +5,16 @@ function MainMenu(props) {
   let { setShipNumber } = props;
 
   return (
-    <div className="main-menu">
+    <div>
       <input
+        className="main-input"
         type="number"
         placeholder="search"
         onChange={(e) => setInput(e.target.value)}
       />
-      <button onClick={() => setShipNumber(input)}> Ship information </button>
+      <button className="main-button" onClick={() => setShipNumber(input)}>
+        Ship information
+      </button>
     </div>
   );
 }

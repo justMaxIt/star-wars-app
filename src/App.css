@@ -5,13 +5,14 @@
 .menu {
   width: 220px;
   height: 100vh;
-  background-color: #44473C;
+  background-color: #272B30;
   display: flex;
   flex-direction: column;
 }
 
 .menu a {
-  margin: 5px;
+  width: 210px;
+  padding: 5px;
   text-decoration: none;
   font-size: 30px;
   font-weight: 600;
@@ -25,24 +26,59 @@
 .main-page {
   display: flex;
   flex-direction: column;
+  width: calc(100vw - 220px);
 }
 
 .main-menu {
-  width: calc(100vw - 220px);
   height: 50px;
-  background-color: #82B440;
+  background-color: #272B30;
 }
 
-.planets-content {
+.main-menu .main-input {
+  background-color: #addde9;
+  color: #272B30;
+  font-weight: normal;
+}
+
+.main-menu .main-button {
+  background-color: #57b9d1;
+  color: #272B30;
+  font-weight: normal;
+}
+
+.main-content {
+  padding: 1em;
+  background-color: #959e95;
+  height: 100vh;
+  color: #fff;
+}
+
+.person-page {
   display: flex;
   flex-direction: column;
   width: calc(100vw - 220px);
 }
 
-/* .planets-pagination {
+.person-menu {
+  height: 50px;
+  background-color: #272B30;
+}
+
+.person-content {
+  padding: 1em;
+  background-color: #959e95;
+  height: 100vh;
+  color: #fff;
+}
+
+.planets-page {
   display: flex;
-  flex-direction: row;
-} */
+  flex-direction: column;
+  width: calc(100vw - 220px);
+  background-color: #959e95;
+  height: 100vh;
+  color: #fff;
+}
 
 .rc-pagination {
   display: flex;
@@ -50,8 +86,41 @@
   list-style-type: none;
 }
 
-.planets-page {
-  background-color: #abebab;
+.rc-pagination button {
+  background-color: rgb(7, 12, 39);
+}
+
+.planets-search-page {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 220px);
+}
+
+.planets-search-menu {
+  height: 50px;
+  background-color: #272B30;
+}
+
+.planets-search-content {
+  padding: 1em;
+  background-color: #959e95;
   height: 100vh;
-  color: #281E20;
+  color: #fff;
+}
+
+.vehicles-page {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 220px);
+}
+
+.vehicles-menu {
+  height: 50px;
+  background-color: #272B30;
+}
+
+.vehicles-content {
+  background-color: #959e95;
+  height: 100vh;
+  color: #fff;
 }
